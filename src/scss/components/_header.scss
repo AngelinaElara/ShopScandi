@@ -1,0 +1,110 @@
+.header {
+  padding: 0 100px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: $header-height;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: $z-index-header;
+  background: $white;
+
+  &__nav {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+  }
+
+  &__button {
+    
+    height: 55px;
+    margin-left: 15px;
+    font-weight: 600;
+    text-transform: uppercase;
+
+    &:nth-child(1) {
+      margin-left: 0;
+    }
+
+    &.active {
+      position: relative;
+      color: $green;
+
+      &::after {
+        content: '';
+        position: absolute;
+        display: block;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 2px;
+        background-color: $green;
+      }
+    }
+  }
+
+  &__actions {
+    height: 30px;
+    width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 20px;
+  }
+
+  &__logo {
+    height: 40px;
+    width: 40px;
+
+    svg {
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  &__currency {
+    height: 30px;
+    width: 40px;
+    font-weight: 500;
+    font-size: 18px;
+    color: $black;
+  }
+
+  &__cart {
+    position: relative;
+    height: 20px;
+    width: 20px;
+    margin-left: 20px;
+
+    svg {
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  &__quantity {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 20px;
+    width: 20px;
+    border-radius: 60px;
+    color: $white;
+    background-color: $black;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    text-transform: uppercase;
+  }
+}

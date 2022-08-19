@@ -1,0 +1,219 @@
+.miniCart {
+  display: none;
+  padding: 32px 16px;
+  position: fixed;
+  top: $header-height;
+  right: 70px;
+  height: 680px;
+  width: 325px;
+  background: $white;
+  z-index: 2;
+  overflow-y: scroll;
+
+  &__title {
+    display: flex;
+    flex-direction: row;
+    width: 120px;
+    justify-content: space-between;
+
+    h2 {
+      font-weight: 700;
+    }
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  &__item {
+    height: 190px;
+    display: flex;
+    flex-direction: row;
+    gap: 4px;
+    justify-content: space-between;
+  }
+
+  &__description {
+    display: flex;
+    flex-direction: column;
+    width: 136px;
+  }
+
+  &__brand {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+  }
+
+  &__nameProduct {
+    margin-top: 4px;
+    font-weight: 300;
+    font-size: 16px;
+  }
+
+  &__price {
+    margin-top: 4px;
+    font-family: 'Raleway';
+    font-weight: 500;
+    font-size: 16px;
+    font-style: normal;
+  }
+
+  &__attributes {
+    margin-top: 8px;
+  }
+
+  &__btns {
+    margin-top: 8px;
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+  }
+
+  &__btn {
+    width: 24px;
+    height: 24px;
+    border: 1px solid $black;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    &.color {
+      width: 20px;
+      height: 20px;
+      border: none;
+
+      &.active {
+        width: 20px;
+        height: 20px;
+        border: 1px solid $green;
+      }
+    }
+
+    &.active {
+      background-color: $black;
+      color: $white;
+    }
+  }
+
+  &__increment {
+    position: relative;
+
+    span {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%);
+      display: block;
+      width: 8px;
+      height: 1px;
+      background-color: $black;
+
+      &::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%) rotate(-90deg);
+        display: block;
+        width: 8px;
+        height: 1px;
+        background-color: $black;
+      }
+    }
+
+
+  }
+
+  &__counter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    width: 24px;
+
+    button {
+      width: 24px;
+      height: 24px;
+      border: 1px solid $black;
+    }
+  }
+
+  &__decrement {
+    position: relative;
+    
+    span {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%);
+      display: block;
+      width: 8px;
+      height: 1px;
+      background-color: $black;
+    }
+  }
+
+  &__photo {
+    width: 120px;
+    height: 190px;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__total {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    font-weight: 700;
+  }
+
+  &__infoBtns {
+    position: absolute;
+    bottom: 0;
+    margin: 30px 0 70px 0;
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+  }
+
+  &__view {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 140px;
+    height: 45px;
+    border: 1px solid $black;
+  }
+
+  &__check {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 140px;
+    height: 45px;
+    color: $white;
+    background: $green;
+  }
+
+  &__add {
+    font-size: 20px;
+  }
+
+  &.active {
+    display: block;
+  }
+}
